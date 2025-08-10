@@ -1,0 +1,11 @@
+{
+  "base_url": "https://bookcart.azurewebsites.net",
+  "api_endpoints": {
+    "register": "/api/User/register",
+    "login": "/api/User/login",
+    "categories": "/api/Book/categories",
+    "books_by_category": "/api/Book?categoryId={categoryId}",
+    "book_details": "/api/Book/{bookId}",
+    "add_to_cart": "/api/ShoppingCart"
+  }
+}
