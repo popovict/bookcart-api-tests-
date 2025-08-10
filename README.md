@@ -123,7 +123,7 @@ Negative Test Cases:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/popovict/bookcart-api-tests-.git
    cd bookcart-api-tests
   
 2. **Create a virual environment**
