@@ -180,6 +180,30 @@ Severity: Low<br />
 Notes: Improves developer experience; needs verification<br />
 
 
+### Bug 4: Registration Endpoint Returns 405 Method Not Allowed
+- **Description**: The `/api/User/register` endpoint returns a 405 status code when a POST request is sent, indicating the method is not allowed.
+- **Steps to Reproduce**:
+  1. Send a POST request to `https://bookcart.azurewebsites.net/api/User/register` with payload:
+     ```json
+     {
+       "username": "testuser_1697051234",
+       "password": "Test@123",
+       "firstName": "Test",
+       "lastName": "User",
+       "gender": "Male"
+     }
+     ```
+     Include header: `Content-Type: application/json`.
+  2. Observe the response.
+- **Expected Behavior**: Returns 200 OK with a `userId` or 400 Bad Request if the username exists or payload is invalid.
+- **Actual Behavior**: Returns 405 Method Not Allowed with no response body.
+- **Severity**: High (blocks core registration functionality).
+- **Notes**:
+  - Swagger documentation lists `/api/User/register` as a POST endpoint, which conflicts with the 405 response.
+  - Response headers (e.g., `Allow`) should indicate supported methods.
+  - Needs confirmation of the correct endpoint or method.
+
+
 
 
 
