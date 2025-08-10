@@ -180,7 +180,7 @@ Severity: Low<br />
 Notes: Improves developer experience; needs verification<br />
 
 
-### Bug 4: Registration Endpoint Returns 405 Method Not Allowed
+### Bug Found: Registration Endpoint Returns 405 Method Not Allowed
 - **Description**: The `/api/User/register` endpoint returns a 405 status code when a POST request is sent, indicating the method is not allowed.
 - **Steps to Reproduce**:
   1. Send a POST request to `https://bookcart.azurewebsites.net/api/User/register` with payload:
